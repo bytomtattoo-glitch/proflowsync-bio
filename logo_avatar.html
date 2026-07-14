@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+*{margin:0;padding:0;}
+body{width:1000px;height:1000px;overflow:hidden;}
+.a{width:1000px;height:1000px;position:relative;
+  background:linear-gradient(135deg,#00e5ff 0%,#4aa8ff 45%,#c04bff 100%);
+  display:grid;place-items:center;}
+.a::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 42%,transparent 40%,rgba(0,0,0,.28) 100%);}
+svg{position:relative;z-index:2;filter:drop-shadow(0 10px 40px rgba(0,0,0,.25));}
+</style></head><body>
+<div class="a">
+  <svg width="620" height="620" viewBox="0 0 64 64" fill="none">
+    <path d="M20 50V16h13a11 11 0 0 1 0 22H20" stroke="#fff" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 44c6-5 10 5 16 0s10 5 16 0" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+    <circle cx="47" cy="18" r="3.4" fill="#fff"/>
+  </svg>
+</div>
+</body></html>

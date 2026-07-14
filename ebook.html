@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>AI START PACK — proflowsync</title>
+<style>
+  @page{size:A4;margin:0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;color:#e9f1ff;background:#080a12;}
+  .page{width:210mm;min-height:297mm;padding:22mm 20mm;position:relative;overflow:hidden;
+    page-break-after:always;background:#080a12;}
+  .page:last-child{page-break-after:auto;}
+  .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;z-index:0;}
+  .g1{width:300px;height:300px;background:#00e5ff;top:-100px;right:-80px;}
+  .g2{width:280px;height:280px;background:#c04bff;bottom:-90px;left:-70px;}
+  .ct{position:relative;z-index:2;}
+  h1{font-size:46px;font-weight:800;line-height:1.1;letter-spacing:.5px;
+    background:linear-gradient(90deg,#fff,#00e5ff,#c04bff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  h2{font-size:27px;font-weight:800;margin:0 0 14px;color:#fff;display:flex;align-items:center;gap:10px;}
+  h2 .bar{width:5px;height:26px;border-radius:3px;background:linear-gradient(#00e5ff,#c04bff);}
+  h3{font-size:18px;color:#00e5ff;margin:20px 0 6px;}
+  p{font-size:14.5px;line-height:1.75;color:#c3d0e8;margin:0 0 12px;}
+  .lead{font-size:16px;color:#dbe6fb;}
+  .brand{font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#8fa0bd;margin-bottom:20px;}
+  .logo{width:74px;height:74px;border-radius:22px;background:linear-gradient(135deg,#00e5ff,#c04bff);
+    display:grid;place-items:center;margin-bottom:26px;box-shadow:0 0 40px rgba(0,229,255,.4);}
+  .prompt{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-left:3px solid #00e5ff;
+    border-radius:10px;padding:13px 15px;margin:10px 0;font-size:13.5px;line-height:1.6;color:#dbe6fb;}
+  .prompt b{color:#39ff9e;}
+  .tool{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;
+    padding:18px;margin:14px 0;}
+  .tool .th{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+  .tool .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;
+    background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(192,75,255,.15));border:1px solid rgba(255,255,255,.12);}
+  .tool .nm{font-size:19px;font-weight:800;color:#fff;}
+  .tool .free{font-size:11px;color:#39ff9e;border:1px solid rgba(57,255,158,.3);border-radius:99px;padding:2px 9px;margin-left:6px;}
+  .btn{display:inline-block;margin-top:10px;font-weight:800;font-size:14px;color:#080a12;text-decoration:none;
+    background:linear-gradient(90deg,#00e5ff,#c04bff);padding:11px 22px;border-radius:10px;}
+  a{color:#00e5ff;}
+  .foot{position:absolute;bottom:12mm;left:20mm;right:20mm;font-size:11px;color:#6f7e99;
+    display:flex;justify-content:space-between;z-index:2;border-top:1px solid rgba(255,255,255,.08);padding-top:8px;}
+  .center{display:flex;flex-direction:column;justify-content:center;min-height:253mm;}
+  .big-cta{text-align:center;background:linear-gradient(160deg,rgba(192,75,255,.15),rgba(0,229,255,.1));
+    border:1px solid rgba(192,75,255,.3);border-radius:20px;padding:34px;margin-top:24px;}
+</style>
+</head>
+<body>
+
+<!-- OKŁADKA -->
+<div class="page">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="ct center">
+    <div class="logo">
+      <svg width="42" height="42" viewBox="0 0 64 64" fill="none">
+        <path d="M20 50V16h13a11 11 0 0 1 0 22H20" stroke="#fff" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 44c6-5 10 5 16 0s10 5 16 0" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+        <circle cx="47" cy="18" r="3.4" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="brand">proflowsync</div>
+    <h1>AI START PACK</h1>
+    <p class="lead" style="margin-top:18px;max-width:150mm">Narzędzia i gotowe prompty, które realnie oszczędzą Ci nawet <b style="color:#39ff9e">10 godzin tygodniowo</b> — nawet jeśli dopiero zaczynasz z AI.</p>
+    <p style="margin-top:40px;color:#8fa0bd;font-size:13px">Darmowy przewodnik · 2026 · bez ściemy, tylko to czego sam używam</p>
+  </div>
+</div>
+
+<!-- WSTĘP -->
+<div class="page">
+  <div class="glow g1"></div>
+  <div class="ct">
+    <h2><span class="bar"></span>Zanim zaczniesz</h2>
+    <p class="lead">Cześć — prowadzę <b>@proflowsync</b>, konto o sztucznej inteligencji na TikToku, Instagramie i YouTubie. Codziennie testuję narzędzia AI i pokazuję, które naprawdę robią robotę.</p>
+    <p>Ten pack to skrót tego, co działa. Trzy rzeczy, które dostajesz:</p>
+    <h3>1. Gotowe prompty</h3>
+    <p>Skopiuj, wklej do ChatGPT, użyj. Bez kombinowania.</p>
+    <h3>2. Mój stack narzędzi</h3>
+    <p>Dokładnie te aplikacje, których używam do pracy, treści i biznesu — każda z darmowym startem.</p>
+    <h3>3. System, który to spina</h3>
+    <p>Jak połączyć prompty i narzędzia w jeden proces, który pracuje za Ciebie.</p>
+    <p style="margin-top:20px;color:#8fa0bd">Zasada jest prosta: <b style="color:#e9f1ff">jeden nawyk mniej ręcznie = godziny odzyskane co tydzień.</b> Lecimy.</p>
+  </div>
+  <div class="foot"><span>proflowsync · AI START PACK</span><span>2</span></div>
+</div>
+
+<!-- PROMPTY -->
+<div class="page">
+  <div class="glow g2"></div>
+  <div class="ct">
+    <h2><span class="bar"></span>Prompty, które oszczędzają czas</h2>
+    <h3>✍️ Treści i social media</h3>
+    <div class="prompt"><b>Hook do shorta:</b> „Napisz 10 mocnych pierwszych zdań (hooków) do krótkiego wideo o [TEMAT]. Każdy max 12 słów, szok albo liczba na początku, po polsku."</div>
+    <div class="prompt"><b>Post na tydzień:</b> „Jesteś strategiem treści. Zaproponuj 7 pomysłów na posty o [NISZA] — dla każdego: temat, hook i CTA."</div>
+    <h3>💼 Praca i produktywność</h3>
+    <div class="prompt"><b>Mejl w 10 sekund:</b> „Napisz uprzejmy, konkretny mail do [KOGO] w sprawie [SPRAWA]. Ton profesjonalny, max 6 zdań."</div>
+    <div class="prompt"><b>Podsumowanie:</b> „Streść poniższy tekst w 5 punktach i wypisz 3 konkretne akcje do zrobienia: [WKLEJ TEKST]."</div>
+    <h3>🚀 Biznes i oferta</h3>
+    <div class="prompt"><b>Opis produktu:</b> „Napisz opis sprzedażowy [PRODUKT] dla [KLIENT]. Podkreśl korzyść, nie cechy. Dodaj mocne CTA."</div>
+    <div class="prompt"><b>Pomysł na biznes:</b> „Podaj 5 pomysłów na biznes online w niszy [NISZA], które da się ruszyć za 0 zł, z krótkim planem startu."</div>
+  </div>
+  <div class="foot"><span>proflowsync · AI START PACK</span><span>3</span></div>
+</div>
+
+<!-- NARZĘDZIA (AFILIACJE) -->
+<div class="page">
+  <div class="glow g1"></div>
+  <div class="ct">
+    <h2><span class="bar"></span>Mój stack narzędzi AI</h2>
+    <p>Te trzy narzędzia są u mnie na stałe. Każde ma darmowy start — kliknij i sprawdź sam.</p>
+
+    <div class="tool">
+      <div class="th"><div class="ico">📧</div><div><span class="nm">GetResponse</span><span class="free">plan 0 zł</span></div></div>
+      <p>Tu buduję listę mailową i puszczam automatyczne kampanie — to serce zarabiania. Wbudowane AI podpowiada tematy i pisze maile za mnie. Jeśli masz robić jedną rzecz pod przychód, zacznij tu.</p>
+      <a class="btn" href="https://www.getresponse.com?a=XAhDjwqCGC">Wypróbuj GetResponse za darmo →</a>
+    </div>
+
+    <div class="tool">
+      <div class="th"><div class="ico">🚀</div><div><span class="nm">Systeme.io</span><span class="free">plan 0 zł</span></div></div>
+      <p>Cały biznes online w jednym miejscu: strony sprzedażowe, maile, kursy i automatyzacje — zamiast sklejać pięć aplikacji. Tu stawiam każdy lejek.</p>
+      <a class="btn" href="https://www.systeme.io/?sa=sa02764167884a74869326426ca729e008af9b332d">Zacznij z Systeme.io za darmo →</a>
+    </div>
+
+    <div class="tool">
+      <div class="th"><div class="ico">🎙️</div><div><span class="nm">ElevenLabs</span><span class="free">plan 0 zł</span></div></div>
+      <p>Najlepszy generator głosu AI — brzmi jak żywy lektor. Używam do podkładów pod shorty, które nagrywam. Dokładnie ta technologia, o której robię materiały.</p>
+      <a class="btn" href="https://try.elevenlabs.io/8pf4y0b3ggrt">Wypróbuj ElevenLabs za darmo →</a>
+    </div>
+  </div>
+  <div class="foot"><span>proflowsync · AI START PACK</span><span>4</span></div>
+</div>
+
+<!-- SYSTEM + CTA -->
+<div class="page">
+  <div class="glow g2"></div>
+  <div class="ct">
+    <h2><span class="bar"></span>Jak to spiąć w system</h2>
+    <p><b style="color:#00e5ff">Krok 1.</b> Weź prompty z tego packa i użyj ich do tworzenia treści — posty, shorty, maile.</p>
+    <p><b style="color:#00e5ff">Krok 2.</b> Treścią przyciągasz ludzi, a <a href="https://www.getresponse.com?a=XAhDjwqCGC">GetResponse</a> zamienia ich w listę mailową, do której wracasz kiedy chcesz.</p>
+    <p><b style="color:#00e5ff">Krok 3.</b> Lejek i ofertę stawiasz w <a href="https://www.systeme.io/?sa=sa02764167884a74869326426ca729e008af9b332d">Systeme.io</a>, a głos pod wideo robisz w <a href="https://try.elevenlabs.io/8pf4y0b3ggrt">ElevenLabs</a>.</p>
+    <p style="margin-top:8px">Trzy narzędzia, jeden przepływ. To wszystko, żeby ruszyć — i wszystko z darmowym startem.</p>
+
+    <div class="big-cta">
+      <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:8px">Chcesz więcej takich rzeczy?</div>
+      <p style="margin-bottom:16px">Codziennie pokazuję narzędzia i triki AI. Wskakuj i bądź na bieżąco:</p>
+      <p style="font-size:15px"><b style="color:#00e5ff">@proflowsync</b> — TikTok · Instagram · YouTube</p>
+      <a class="btn" href="https://bytomtattoo-glitch.github.io/proflowsync-bio/" style="margin-top:16px">Wszystkie narzędzia i linki →</a>
+    </div>
+    <p style="text-align:center;margin-top:22px;color:#6f7e99;font-size:12px">Dzięki, że pobrałeś. Teraz idź i odzyskaj te godziny. 🚀</p>
+  </div>
+  <div class="foot"><span>proflowsync · AI START PACK</span><span>5</span></div>
+</div>
+
+</body>
+</html>
