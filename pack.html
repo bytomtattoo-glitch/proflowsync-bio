@@ -5,31 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>50 promptów AI — darmowy pack od proflowsync</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  :root{--bg:#05060d;--cyan:#00e5ff;--mag:#c04bff;--lime:#39ff9e;
+    --card:rgba(255,255,255,.035);--line:rgba(255,255,255,.09);--txt:#eaf2ff;--mut:#8fa0bd;}
+  html,body{overflow-x:hidden;}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-    background:radial-gradient(circle at 50% 0%,#1a1035 0%,#0a0a12 60%);color:#fff;
-    padding:32px 18px 60px;line-height:1.55;}
-  .wrap{max-width:640px;margin:0 auto;}
-  h1{font-size:27px;font-weight:800;text-align:center;letter-spacing:-.5px;}
-  .sub{text-align:center;color:#b8b8c8;margin:8px 0 30px;font-size:15px;}
-  h2{font-size:16px;color:#9b8cff;margin:26px 0 12px;text-transform:uppercase;letter-spacing:1px;
-    border-bottom:1px solid #262640;padding-bottom:8px;}
-  .p{background:#16162a;border:1px solid #232340;border-left:3px solid #7b2ff7;border-radius:10px;
-    padding:13px 15px;margin-bottom:10px;font-size:14.5px;}
-  .p b{color:#c9b8ff;}
-  .cta{background:linear-gradient(135deg,#7b2ff7,#b14bff);border-radius:20px;padding:24px;
-    text-align:center;margin:34px 0 10px;box-shadow:0 10px 40px rgba(123,47,247,.4);}
+    background:var(--bg);color:var(--txt);padding:32px 18px 60px;line-height:1.55;position:relative;}
+  .bg{position:fixed;inset:0;z-index:0;overflow:hidden;}
+  .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;}
+  .orb.a{width:320px;height:320px;background:var(--cyan);top:-120px;left:-90px;}
+  .orb.b{width:300px;height:300px;background:var(--mag);top:40%;right:-110px;}
+  .wrap{max-width:640px;margin:0 auto;position:relative;z-index:2;}
+  h1{font-size:29px;font-weight:800;text-align:center;letter-spacing:-.5px;
+    background:linear-gradient(90deg,#fff,var(--cyan),var(--mag),#fff);background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite;}
+  @keyframes shine{to{background-position:200% center;}}
+  .sub{text-align:center;color:var(--mut);margin:8px 0 30px;font-size:15px;}
+  h2{font-size:14px;color:var(--cyan);margin:28px 0 12px;text-transform:uppercase;letter-spacing:1.5px;
+    display:flex;align-items:center;gap:9px;}
+  h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);}
+  .p{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:11px;
+    padding:13px 15px;margin-bottom:10px;font-size:14.5px;color:#dbe6fb;transition:border-color .2s,transform .15s;}
+  .p:hover{border-left-color:var(--mag);transform:translateX(3px);}
+  .p b{color:var(--lime);}
+  /* NARZĘDZIA (afiliacje) */
+  .tool{display:block;text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);
+    border-radius:15px;padding:16px;margin-bottom:12px;transition:transform .18s,box-shadow .25s,border-color .25s;}
+  .tool:hover{transform:translateY(-2px);border-color:rgba(0,229,255,.35);box-shadow:0 8px 34px rgba(0,229,255,.16);}
+  .tool .th{display:flex;align-items:center;gap:12px;}
+  .tool .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;flex:none;
+    background:linear-gradient(135deg,rgba(0,229,255,.14),rgba(192,75,255,.14));border:1px solid var(--line);}
+  .tool .nm{font-size:17px;font-weight:800;}
+  .tool .free{font-size:10px;color:var(--lime);border:1px solid rgba(57,255,158,.3);border-radius:99px;padding:2px 8px;margin-left:6px;}
+  .tool .d{color:var(--mut);font-size:13px;margin-top:9px;}
+  .cta{background:linear-gradient(160deg,rgba(192,75,255,.15),rgba(0,229,255,.1));border:1px solid rgba(192,75,255,.3);
+    border-radius:20px;padding:26px;text-align:center;margin:30px 0 10px;}
   .cta h3{font-size:20px;margin-bottom:8px;}
-  .cta p{font-size:14px;color:#f0e8ff;margin-bottom:14px;}
-  .cta a{display:inline-block;background:#fff;color:#7b2ff7;font-weight:800;text-decoration:none;
-    padding:12px 26px;border-radius:13px;margin:4px;}
-  .back{display:block;text-align:center;color:#7b7b95;margin-top:24px;text-decoration:none;font-size:14px;}
+  .cta p{font-size:14px;color:var(--mut);margin-bottom:16px;}
+  .cta a{display:inline-block;font-weight:800;color:var(--bg);text-decoration:none;
+    background:linear-gradient(90deg,var(--cyan),var(--mag));padding:12px 26px;border-radius:12px;
+    box-shadow:0 0 24px rgba(0,229,255,.3);}
+  .back{display:block;text-align:center;color:var(--mut);margin-top:22px;text-decoration:none;font-size:14px;}
 </style>
 </head>
 <body>
+<div class="bg"><div class="orb a"></div><div class="orb b"></div></div>
 <div class="wrap">
   <h1>🎁 50 promptów AI</h1>
-  <div class="sub">Gotowe do wklejenia w ChatGPT, Claude czy Copy.ai. Kopiuj, wklej, oszczędzaj godziny.</div>
+  <div class="sub">Gotowe do wklejenia w ChatGPT, Claude czy Gemini. Kopiuj, wklej, oszczędzaj godziny.</div>
 
   <h2>💼 Praca i produktywność</h2>
   <div class="p"><b>1.</b> „Streść ten tekst w 5 punktach, które zapamiętam na zawsze: [wklej tekst]"</div>
@@ -91,10 +114,24 @@
   <div class="p"><b>49.</b> „Napisz mi motywujące przypomnienie, które przeczytam, gdy nie mam siły."</div>
   <div class="p"><b>50.</b> „Zadaj mi 3 pytania, które pomogą mi zrozumieć, czego naprawdę chcę."</div>
 
+  <h2>🚀 W tym te prompty śmigają najlepiej</h2>
+  <a class="tool" href="https://www.getresponse.com?a=XAhDjwqCGC" target="_blank" rel="noopener sponsored">
+    <div class="th"><div class="ico">📧</div><div><span class="nm">GetResponse</span><span class="free">plan 0 zł</span></div></div>
+    <div class="d">Wklej prompty do treści, a GetResponse zamieni czytelników w listę mailową i wyśle kampanie za Ciebie. Tu robię przychód.</div>
+  </a>
+  <a class="tool" href="https://www.systeme.io/?sa=sa02764167884a74869326426ca729e008af9b332d" target="_blank" rel="noopener sponsored">
+    <div class="th"><div class="ico">🚀</div><div><span class="nm">Systeme.io</span><span class="free">plan 0 zł</span></div></div>
+    <div class="d">Strony, lejki, kursy i automatyzacje w jednym miejscu — postaw ofertę z tego, co wygenerujesz promptami.</div>
+  </a>
+  <a class="tool" href="https://try.elevenlabs.io/8pf4y0b3ggrt" target="_blank" rel="noopener sponsored">
+    <div class="th"><div class="ico">🎙️</div><div><span class="nm">ElevenLabs</span><span class="free">plan 0 zł</span></div></div>
+    <div class="d">Prompt na scenariusz + ElevenLabs na głos = gotowy lektor pod short w kilka minut. Tego używam.</div>
+  </a>
+
   <div class="cta">
-    <h3>🚀 Chcesz robić to szybciej?</h3>
-    <p>Te prompty działają najlepiej w narzędziach AI, których używam na co dzień.</p>
-    <a href="index.html">Zobacz narzędzia →</a>
+    <h3>🚀 Chcesz więcej takich rzeczy?</h3>
+    <p>Codziennie pokazuję narzędzia i triki AI na @proflowsync. Wskakuj po resztę.</p>
+    <a href="index.html">Wszystkie narzędzia i linki →</a>
   </div>
   <a class="back" href="index.html">← wróć do proflowsync</a>
 </div>
