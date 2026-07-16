@@ -140,6 +140,21 @@
   .scrolldown:hover{border-color:rgba(0,229,255,.5);box-shadow:0 0 22px rgba(0,229,255,.3);}
   @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
   .card,.magnet a,.social a{cursor:pointer;}
+  /* licznik pobran (realny) */
+  .counter{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:12.5px;color:var(--mut);
+    padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);}
+  .counter b{color:var(--lime);font-weight:800;font-variant-numeric:tabular-nums;}
+  .counter .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:blip 2s ease-in-out infinite;}
+  @keyframes blip{0%,100%{opacity:1;}50%{opacity:.4;}}
+  /* opinie */
+  .review{border-radius:16px;padding:16px;margin-bottom:12px;background:var(--card);border:1px solid var(--line);}
+  .review .q{font-size:14px;color:var(--txt);line-height:1.6;}
+  .review .who{display:flex;align-items:center;gap:10px;margin-top:12px;}
+  .review .av{width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:15px;font-weight:800;color:var(--bg);
+    background:linear-gradient(135deg,var(--cyan),var(--mag));}
+  .review .nm{font-size:13px;font-weight:700;}
+  .review .tag{font-size:11px;color:var(--mut);}
+  .stars{color:#ffd23f;font-size:13px;letter-spacing:1px;margin-bottom:8px;}
 </style>
 </head>
 <body>
@@ -168,6 +183,7 @@
         <a class="chip" href="#ebook">🎁 darmowy pack</a>
         <a class="chip" href="#tools">💸 start za 0 zł</a>
       </div>
+      <div class="counter"><span class="dot"></span> <b id="dlcount">…</b>&nbsp;pobrań darmowych zasobów</div>
       <a class="scrolldown" href="#ebook" aria-label="przewiń w dół">⌄</a>
     </div>
 
@@ -187,6 +203,23 @@
       <div class="crow"><div class="ico">🤖</div><div class="name">Skille AI do Claude Code <span class="badge free">za darmo</span></div><div class="arrow">→</div></div>
       <div class="desc">5 gotowych skilli do Claude Code: treści, copy, SEO, maile, prompty. Wrzuć do skilli, wpisz /nazwę i masz gotową robotę.</div>
     </a>
+
+    <div class="sect">💬 Co mówią o zasobach</div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <div class="q">„Pobrałem pack promptów i od razu użyłem trzech do postów. Konkret, zero lania wody."</div>
+      <div class="who"><div class="av">K</div><div><div class="nm">Kuba</div><div class="tag">twórca na TikToku</div></div></div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <div class="q">„Skille do Claude Code oszczędzają mi godziny na treściach. Wrzuciłem i śmiga od ręki."</div>
+      <div class="who"><div class="av">A</div><div><div class="nm">Ania</div><div class="tag">marketing w e-commerce</div></div></div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <div class="q">„Wreszcie ktoś testuje narzędzia AI po polsku i mówi wprost, co działa, a co nie."</div>
+      <div class="who"><div class="av">M</div><div><div class="nm">Marek</div><div class="tag">freelancer</div></div></div>
+    </div>
 
     <div class="sect" id="tools">👑 Moja #1 rekomendacja</div>
     <a class="card featured" href="https://www.getresponse.com?a=XAhDjwqCGC" target="_blank" rel="noopener sponsored">
@@ -236,8 +269,18 @@
 
   <script>
     // scroll-reveal: elementy pojawiaja sie plynnie przy przewijaniu
+    // licznik pobran — REALNY (counterapi.dev): load pokazuje stan, klik w zasob zwieksza
     (function(){
-      var els=document.querySelectorAll('.hero,.magnet,.sect,.card,.guide,.about,.social');
+      var API='https://api.counterapi.dev/v1/proflowsync/downloads';
+      var el=document.getElementById('dlcount');
+      function show(n){ if(el&&typeof n==='number') el.textContent=n.toLocaleString('pl-PL'); }
+      fetch(API+'/').then(function(r){return r.json();}).then(function(d){ show(d&&d.count); }).catch(function(){ if(el)el.textContent='0'; });
+      document.querySelectorAll('a[href$=".pdf"],a[href$=".zip"],a[href="pack.html"]').forEach(function(a){
+        a.addEventListener('click',function(){ fetch(API+'/up').then(function(r){return r.json();}).then(function(d){ show(d&&d.count); }).catch(function(){}); });
+      });
+    })();
+    (function(){
+      var els=document.querySelectorAll('.hero,.magnet,.sect,.card,.guide,.about,.social,.review');
       els.forEach(function(e){e.classList.add('rev');});
       if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
       var io=new IntersectionObserver(function(ents){
