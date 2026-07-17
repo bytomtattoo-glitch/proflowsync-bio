@@ -68,7 +68,9 @@
   .card:hover::before{opacity:1;}
   .crow{display:flex;align-items:center;gap:13px;}
   .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:23px;flex:none;
-    background:linear-gradient(135deg,rgba(0,229,255,.14),rgba(192,75,255,.14));border:1px solid var(--line);}
+    background:linear-gradient(135deg,rgba(0,229,255,.14),rgba(192,75,255,.14));border:1px solid var(--line);overflow:hidden;}
+  .ico.logo{background:#fff;padding:7px;}
+  .ico.logo img{width:100%;height:100%;object-fit:contain;}
   .name{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
   .badge{font-size:10px;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:999px;
     background:rgba(0,229,255,.12);color:var(--cyan);border:1px solid rgba(0,229,255,.25);font-weight:700;}
@@ -222,18 +224,18 @@
     <div class="sect" id="tools">👑 Moja #1 rekomendacja</div>
     <a class="card featured" href="https://www.getresponse.com?a=XAhDjwqCGC" target="_blank" rel="noopener sponsored">
       <span class="crown">★ najlepszy wybór</span>
-      <div class="crow"><div class="ico">📧</div><div class="name">GetResponse <span class="badge free">plan 0 zł</span></div></div>
+      <div class="crow"><div class="ico logo"><img src="https://www.google.com/s2/favicons?domain=getresponse.com&sz=128" alt="GetResponse" loading="lazy"></div><div class="name">GetResponse <span class="badge free">plan 0 zł</span></div></div>
       <div class="desc">Tu buduję listę mailową i puszczam automatyczne kampanie — serce mojego zarabiania. AI podpowiada tematy i pisze maile za mnie.</div>
       <div class="cta">Zacznij za darmo →</div>
     </a>
 
     <div class="sect">⚡ Reszta mojego stacku AI</div>
     <a class="card" href="https://www.systeme.io/?sa=sa02764167884a74869326426ca729e008af9b332d" target="_blank" rel="noopener sponsored">
-      <div class="crow"><div class="ico">🚀</div><div class="name">Systeme.io <span class="badge free">plan 0 zł</span></div><div class="arrow">→</div></div>
+      <div class="crow"><div class="ico logo"><img src="https://www.google.com/s2/favicons?domain=systeme.io&sz=128" alt="Systeme.io" loading="lazy"></div><div class="name">Systeme.io <span class="badge free">plan 0 zł</span></div><div class="arrow">→</div></div>
       <div class="desc">Cały biznes online w jednym miejscu: strony sprzedażowe, maile, kursy i automatyzacje. Tu zaczynam każdy lejek.</div>
     </a>
     <a class="card" href="https://try.elevenlabs.io/8pf4y0b3ggrt" target="_blank" rel="noopener sponsored">
-      <div class="crow"><div class="ico">🎙️</div><div class="name">ElevenLabs <span class="badge">AI głos</span></div><div class="arrow">→</div></div>
+      <div class="crow"><div class="ico logo"><img src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128" alt="ElevenLabs" loading="lazy"></div><div class="name">ElevenLabs <span class="badge">AI głos</span></div><div class="arrow">→</div></div>
       <div class="desc">Najlepszy generator głosu AI — brzmi jak żywy lektor. Dokładnie ta technologia, o której nagrywam. Używam do podkładów pod shorty.</div>
     </a>
 
